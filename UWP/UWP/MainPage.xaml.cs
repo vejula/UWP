@@ -29,7 +29,8 @@ namespace UWP
 
 		private async void ShowMessage(object sender, RoutedEventArgs e)
 		{
-			var dialog = new ContentDialog {Content = "Hello Message"};
+			var dialog = new ContentDialog {Content = "Hello Message" };
+			dialog.Tapped += delegate { dialog.Hide(); };
 			await dialog.ShowAsync();
 		}
 	}
