@@ -26,6 +26,11 @@ namespace UWP
         {
             this.InitializeComponent();
         }
-		
+
+		private async void ShowMessage(object sender, RoutedEventArgs e)
+		{
+			var dialog = new ContentDialog {Content = "Hello Message"};
+			await dialog.ShowAsync();
+		}
 	}
 }
